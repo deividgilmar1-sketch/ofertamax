@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ofertas online, descontos e promoções em destaque.">
+  <title>OfertaMax — Ofertas que valem a pena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="logo" href="#">Oferta<span>Max</span></a>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Buscar ofertas..." aria-label="Buscar ofertas">
+        <button id="searchBtn">🔎</button>
+      </div>
+      <button class="cart-btn" id="cartBtn">🛒 <span>Carrinho</span> <b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">🔥 OFERTAS SELECIONADAS</span>
+          <h1>Os melhores descontos em um só lugar.</h1>
+          <p>Encontre produtos em promoção, compare preços e aproveite oportunidades por tempo limitado.</p>
+          <a href="#ofertas" class="primary">Ver ofertas</a>
+        </div>
+        <div class="hero-card">
+          <span>OFERTA DO DIA</span>
+          <strong>Até 70% OFF</strong>
+          <small>Promoções atualizadas regularmente</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories container">
+      <button class="category active" data-category="Todos">Todos</button>
+      <button class="category" data-category="Eletrônicos">📱 Eletrônicos</button>
+      <button class="category" data-category="Casa">🏠 Casa</button>
+      <button class="category" data-category="Moda">👟 Moda</button>
+      <button class="category" data-category="Games">🎮 Games</button>
+    </section>
+
+    <section class="container section" id="ofertas">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">DESTAQUES</span>
+          <h2>Ofertas do momento</h2>
+        </div>
+        <span id="resultCount"></span>
+      </div>
+      <div id="products" class="products"></div>
+      <p id="empty" class="empty" hidden>Nenhuma oferta encontrada.</p>
+    </section>
+
+    <section class="deal container">
+      <div>
+        <span class="eyebrow">⏰ OFERTA RELÂMPAGO</span>
+        <h2>Descontos por tempo limitado</h2>
+        <p>Corra: a promoção termina em</p>
+      </div>
+      <div class="timer">
+        <div><b id="hours">00</b><span>Horas</span></div>
+        <div><b id="minutes">00</b><span>Min</span></div>
+        <div><b id="seconds">00</b><span>Seg</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart">
+    <div class="cart-head"><h2>Seu carrinho</h2><button id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-foot">
+      <div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button class="primary checkout" id="checkout">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="logo" href="#">Oferta<span>Max</span></a><p>Ofertas, descontos e oportunidades em um só lugar.</p></div>
+      <div><h3>Atendimento</h3><p>Suporte • Termos • Privacidade</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
